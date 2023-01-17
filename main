@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+typedef struct{
+    char nome[200];
+    char celular[40];
+    char email[200];
+    int idade
+}Alunos;
+Alunos aluno[3];
+
+main(){
+    int i;
+    for(i=0;i<2;i++){
+        printf("Digite o nome do aluno %d: ", i+1);
+        scanf("%s", &aluno[i].nome);
+        printf("Digite o celular do aluno %d: ", i+1);
+        scanf("%s", &aluno[i].celular);
+        printf("Digite o email do aluno %d: ", i+1);
+        scanf("%s", &aluno[i].email);
+        printf("Digite o idade do aluno %d: ", i+1);
+        scanf("%d", &aluno[i].idade);
+        printf("\n");
+    }
+    for(i=0;i<2;i++){
+        printf("\nAluno%d: %s", i+1, aluno[i].nome);
+        printf("\nIdade: %d", aluno[i].idade);
+        printf("\nCelular: %s", aluno[i].celular);
+        printf("\nEmail: %s", aluno[i].email);
+        printf("\n\n");
+
+    }
+}

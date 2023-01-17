@@ -29,4 +29,12 @@ main(){
         printf("\n\n");
 
     }
-}
+    FILE *fp;
+    if ((fp=fopen("dados-alunos.txt", "w")) != NULL ) {
+        for(i=0; i<2; i++) {
+            fprintf(fp, "\nNome: %s", aluno[i].nome);
+            fprintf(fp, "\nCelular: %s", aluno[i].celular);
+            fprintf(fp, "\nIdade: %d \n", aluno[i].idade);
+        }
+        fclose(fp);
+}}
